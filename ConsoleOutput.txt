@@ -1,0 +1,64 @@
+Console Output
+Started by user Manish Parida
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\codebuild
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential git
+Cloning the remote Git repository
+Cloning repository https://github.com/intersystems/Samples-dotnet-helloworld.git
+ > C:\Program Files\Git\bin\git.exe init C:\ProgramData\Jenkins\.jenkins\workspace\codebuild # timeout=10
+Fetching upstream changes from https://github.com/intersystems/Samples-dotnet-helloworld.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > git --version # 'git version 2.34.1.windows.1'
+using GIT_ASKPASS to set credentials 
+ > C:\Program Files\Git\bin\git.exe fetch --tags --force --progress -- https://github.com/intersystems/Samples-dotnet-helloworld.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/intersystems/Samples-dotnet-helloworld.git # timeout=10
+ > C:\Program Files\Git\bin\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision 7e1321ddc500aab27c6253b34993ab68f8aef656 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 7e1321ddc500aab27c6253b34993ab68f8aef656 # timeout=10
+Commit message: "Update README.md"
+ > C:\Program Files\Git\bin\git.exe rev-list --no-walk 7e1321ddc500aab27c6253b34993ab68f8aef656 # timeout=10
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\msbuild.exe" C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld.sln " && exit %%ERRORLEVEL%% from C:\ProgramData\Jenkins\.jenkins\workspace\codebuild
+[codebuild] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\msbuild.exe" C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 17.0.0+c9eb9dd64 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+Build started 21-01-2022 15:00:26.
+Project "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld.sln" (1) is building "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\samples-dotnet-helloworld.csproj" (2) on node 1 (default targets).
+GenerateBindingRedirects:
+  No suggested binding redirects from ResolveAssemblyReferences.
+CoreCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /fullpaths /nostdlib+ /platform:anycpu32bitpreferred /errorreport:prompt /warn:4 /define:DEBUG;TRACE /highentropyva+ /reference:C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\InterSystems.Data.IRISClient.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.Linq.dll" /debug+ /debug:full /filealign:512 /optimize- /out:obj\Debug\samples-dotnet-helloworld.exe /subsystemversion:6.00 /target:exe /utf8output /deterministic+ /langversion:7.3 HelloWorld.cs Properties\AssemblyInfo.cs "obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs"
+  CompilerServer: server - server processed compilation - ee5821c3-3e16-4205-a5d2-5772b78119e7
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\InterSystems.Data.IRISClient.dll" to "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\bin\Debug\InterSystems.Data.IRISClient.dll".
+  Touching "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\obj\Debug\samples-dotnet-helloworld.csproj.CopyComplete".
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Copying file from "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\obj\Debug\samples-dotnet-helloworld.exe" to "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\bin\Debug\samples-dotnet-helloworld.exe".
+  samples-dotnet-helloworld -> C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\bin\Debug\samples-dotnet-helloworld.exe
+  Copying file from "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\obj\Debug\samples-dotnet-helloworld.pdb" to "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\bin\Debug\samples-dotnet-helloworld.pdb".
+Done Building Project "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld\samples-dotnet-helloworld.csproj" (default targets).
+Done Building Project "C:\ProgramData\Jenkins\.jenkins\workspace\codebuild\samples-dotnet-helloworld.sln" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:10.75
+[codebuild] $ powershell.exe -NonInteractive -ExecutionPolicy Bypass -File C:\WINDOWS\TEMP\jenkins7334860264681895919.ps1
+Archiving artifacts
+Finished: SUCCESS
